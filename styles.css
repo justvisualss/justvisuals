@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justvisuals</title>
+    <meta
+      name="description"
+      content="justvisuals is a modern visual design playground for generating color palettes, gradients, and mockups."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">J</div>
+          <div>
+            <p class="eyebrow">design systems</p>
+            <h1>justvisuals</h1>
+          </div>
+        </div>
+
+        <nav class="top-actions" aria-label="Main actions">
+          <button class="secondary-btn" id="shuffle-layout">Shuffle layout</button>
+          <button class="primary-btn" id="generate-palette">Generate palette</button>
+        </nav>
+      </header>
+
+      <main class="app-grid">
+        <section class="panel hero-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow muted">creative toolkit</p>
+              <h2>Visual direction studio</h2>
+            </div>
+            <div class="chip" id="palette-name">Aurora Blend</div>
+          </div>
+
+          <div class="hero-copy">
+            <p>
+              Build thoughtful brand palettes, product surfaces, and visual concepts with
+              a single click.
+            </p>
+          </div>
+
+          <div class="palette-grid" id="palette-grid" aria-live="polite"></div>
+        </section>
+
+        <aside class="panel preview-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow muted">preview</p>
+              <h3>Live mockup</h3>
+            </div>
+            <button class="ghost-btn" id="copy-all">Copy palette</button>
+          </div>
+
+          <div class="gradient-surface" id="gradient-surface" aria-hidden="true"></div>
+
+          <div class="mock-window">
+            <div class="window-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="mock-content">
+              <div class="mini-card card-one">
+                <span class="mini-label">Brand</span>
+                <h4>Northstar</h4>
+              </div>
+
+              <div class="cta-row">
+                <button class="mock-btn primary">Launch</button>
+                <button class="mock-btn secondary">Docs</button>
+              </div>
+
+              <div class="metric-row">
+                <div>
+                  <strong id="metric-value">92%</strong>
+                  <span>engagement</span>
+                </div>
+                <div>
+                  <strong id="metric-contrast">High</strong>
+                  <span>contrast</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <section class="panel typography-panel">
+        <div class="panel-header compact">
+          <div>
+            <p class="eyebrow muted">typography</p>
+            <h3>Brand voice</h3>
+          </div>
+        </div>
+
+        <div class="type-sample">
+          <div>
+            <p class="sample-kicker">Campaign concept</p>
+            <h4>Build ideas that feel unforgettable.</h4>
+          </div>
+          <p class="sample-body">
+            Exceptional products deserve visual systems that are expressive, consistent, and
+            ready for scaling across interfaces, campaigns, and product stories.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
